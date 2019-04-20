@@ -2,6 +2,8 @@ REACT STARTER
 =============
 This react starter project is largely inspired by Linh Nguyen My's article<br/> ["How to Create a React app from scrath using Webpack 4"](https://medium.freecodecamp.org/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75).
 
+Apart from Linh Nguyen My's example I have added support for SCSS and file based assets such as fonts.
+
 Installed Dependencies
 
 ---
