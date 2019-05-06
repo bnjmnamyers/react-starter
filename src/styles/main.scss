@@ -1,0 +1,133 @@
+/******** PARTIALS ********/
+//@import '_animations';
+@import './partials/_fonts.scss';
+@import './partials/_functions';
+@import './partials/_mixins';
+@import './partials/_variables';
+
+/******************************** NOTES ********************************
+
+    To maintain consistency and ease for finding properties, 
+    all properties should be arranged in the following order:
+
+    1. POSITIONING
+    2. DISPLAY & BOX MODEL
+    3. COLOR
+    4. TEXT
+    5. OTHER
+
+******************************** NOTES ********************************/
+
+/******** Global Styles ********/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    width: 100%;
+    @include flex-box(column, center);
+    @include museo700(24);
+}
+
+header {
+    @include flex-box($justifyContent: center, $alignItems: center);
+    width: 100%;
+    height: 80px;
+    background-color: $pfjRed;
+}
+
+#yellow-bar {
+    width: 100%;
+    height: 6px;
+    margin-top: 4px;
+    background-color: $pfjYellow;
+}
+
+#environments {
+    @include flex-box($direction: row, $justifyContent: space-evenly, $flexWrap: wrap);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.environment {
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 20px;
+
+    header {
+        height: 46px;
+        background-color: $pfjRed;
+        @include museo700(20);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: #fff;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        transition: max-height .25s ease-in;
+        max-height: 4000px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow: 0px 2px 6px #ccc;
+    }
+
+    ul.collapsed {
+        transition: max-height .25s ease-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    li {
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+        font-size: rem-calc(14);
+
+        a {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 14px;
+            border-left: 12px solid $pfjYellow;
+            text-decoration: none;
+            color: $pfjDarkGray;
+            background-image: linear-gradient(to left, transparent, transparent 50%, $pfjYellow 50%, $pfjYellow);
+            background-position: 100% 0;
+            background-size: 200% 100%;
+            transition: background-position .25s ease-in;
+
+            &:hover {
+                background-position: 0 0;
+                font-weight: bold;
+            }
+        }
+    }
+
+    li:last-child {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom: none;
+
+        a {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .environment {
+        width: 46%;
+    }
+}
+
+@media (min-width: 1366px) {
+    .environment {
+        width: 22.5%;
+    }
+}

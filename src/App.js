@@ -1,8 +1,12 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
+import Greeting from './containers/Greeting/Greeting';
+import './styles/main.scss';
 
 class App extends Component {
     render() {
-        return("Hello, World!");
+        return (
+            <h1>Hello, React!</h1>
+        );
     }
 }
 

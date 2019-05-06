@@ -1,0 +1,54 @@
+@mixin button($bgColor, $color, $hoverBgColor, $hoverColor) {
+    padding: rem-calc(13) rem-calc(40);
+    border-radius: rem-calc(5);
+    border: none;
+    color: $color;
+    background-color: $bgColor;
+    @include museo700(16);
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hoverBgColor;
+        color: $hoverColor;
+    }
+}
+
+@mixin flex-box($direction: row, $alignItems: flex-start, $justifyContent: flex-start, $flexWrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    flex-wrap: $flexWrap;
+}
+
+@mixin museo100($size) {
+    font: rem-calc($size) 'MuseoSans-100';
+}
+
+@mixin museo100Italic($size) {
+    font: rem-calc($size) 'MuseoSans-100Italic';
+}
+
+@mixin museo300($size) {
+    font: rem-calc($size) 'MuseoSans-300';
+}
+
+@mixin museo300Italic($size) {
+    font: rem-calc($size) 'MuseoSans-300Italic';
+}
+
+@mixin museo700($size) {
+    font: rem-calc($size) 'MuseoSans-700';
+}
+
+@mixin museo700Italic($size) {
+    font: rem-calc($size) 'MuseoSans-700Italic';
+}
+
+@mixin museo900($size) {
+    font: rem-calc($size) 'MuseoSans-900';
+}
+
+@mixin museo900Italic($size) {
+    font: rem-calc($size) 'MuseoSans-900Italic';
+}
