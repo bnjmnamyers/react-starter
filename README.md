@@ -8,16 +8,21 @@ Installed Dependencies
 
 ---
 
-* babel-core (Transforms code from ES6 to ES5 to work in older browsers)
+* @babel/core (Transforms code from ES6 to ES5 to work in older browsers)
+* @babel/preset-env (Determines which transformations/plugins and polyfills to use based on the browser matrix you want to support)
+* @babel/preset-react (Babel preset for all React plugins, turns JSX into functions)
 * babel-loader (Transforms JS dependencies)
-* babel-preset-env (Determines which transformations/plugins and polyfills to use based on the browser matrix you want to support)
-* babel-preset-react (Babel preset for all React plugins, turns JSX into functions)
+* babel-jest
 * css-loader (Resolves css files)
+* enzyme (Emulates components and DOM for unit testing)
+* enzyme-adapter-react-16
 * file-loader (Allows importing of file-based assets into webpack managed JS and CSS files e.g. locally hosted custom fonts)
 * html-webpack-plugin (Generates an HTML file with ```<script>``` injected... writes this to dist/index.html and minifies the file)
+* jest (Runs unit tests)
 * node-sass (sass-loader has this as a dependency)
 * react
 * react-dom
+* react-test-renderer
 * sass-loader (Allows webpack to compile sass into css)
 * style-loader (Injects the styles into the DOM)
 * webpack
