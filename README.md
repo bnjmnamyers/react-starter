@@ -22,6 +22,8 @@ Installed Dependencies
 * node-sass (sass-loader has this as a dependency)
 * react
 * react-dom
+* react-router
+* react-router-dom
 * react-test-renderer
 * sass-loader (Allows webpack to compile sass into css)
 * style-loader (Injects the styles into the DOM)
