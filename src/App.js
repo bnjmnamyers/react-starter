@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Boom from './components/Boom/Boom';
-import Shakalaka from './components/Shakalaka/Shakalaka';
-
 import './styles/main.scss';
 
 class App extends Component {
