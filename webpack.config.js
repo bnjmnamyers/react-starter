@@ -3,7 +3,8 @@ const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const htmlPlugin = new HtmlWebPackPlugin({
   template: path.resolve('./src/index.html'),
-  filename: "./index.html"
+  filename: "./index.html",
+  favicon: "./src/favicon.ico"
 });
 
 module.exports = {
@@ -15,6 +16,8 @@ module.exports = {
   },
   devServer: {
     contentBase: "./build",
+    historyApiFallback: true,
+    hot: true
   },
   module: {
     rules: [
@@ -45,7 +48,17 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'assets/images/'
+            outputPath: 'assets/images'
+          }
+        }]
+      },
+      {
+        test: /\.(pdf)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'media/'
           }
         }]
       }
